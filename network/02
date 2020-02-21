@@ -1,1 +1,5 @@
+# ipconfig getifaddr en0 (to find your IP address if you are connected to a wireless network)
+# ipconfig getifaddr en1 (if you are connected to an Ethernet)
 ipconfig getifaddr en0
+# Address Resolution Protocol which can be used to find out about every device on the local network
+arp -a | awk '{print $2}'
