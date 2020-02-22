@@ -1,1 +1,4 @@
+# MAC OS
 ifconfig -l
+# Debian
+# ip link show | awk '{print substr($2, 1, length($2)-1)}' | awk 'NR%2==1'

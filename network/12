@@ -1,1 +1,3 @@
-ping 10.51.1.253
+ipconfig getoption en0 server_identifier
+# or try this: ipconfig getpacket en0
+# look for server_identifier
