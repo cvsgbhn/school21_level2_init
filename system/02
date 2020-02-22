@@ -1,1 +1,2 @@
+# shows current name: hostnamectl
 hostname new_name
