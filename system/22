@@ -1,0 +1,4 @@
+sudo adduser username
+# next is to add user to the sudoers list
+su -
+usermod -aG sudo username

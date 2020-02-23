@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Kill all sessions for username user.
+# pkill -KILL -u $1
+
+# Now that all the sessions have been killed, delete the user.
+userdel -rf username

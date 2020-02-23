@@ -1,2 +1,1 @@
-iptables -P INPUT DROP
-iptables -P OUTPUT DROP
+systemctl list-units --type service --all

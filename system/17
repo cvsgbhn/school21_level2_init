@@ -1,1 +1,1 @@
-iptables -L
+ssh -p 50000 vdanilo@192.168.22.121
