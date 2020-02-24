@@ -1,7 +1,5 @@
-#!/usr/bin/env sh
-
-# Kill all sessions for username user.
-# pkill -KILL -u $1
-
-# Now that all the sessions have been killed, delete the user.
-userdel -rf username
+#!/bin/bash
+# must be runned by root/with sudo
+NAME=`w | awk ‘{if(NR==3) print $1}‘`
+pgrep -u $NAME | while read PID; do sudo kill $PID; done
+deluser $NAME

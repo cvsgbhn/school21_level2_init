@@ -3,7 +3,7 @@
 read -p "Enter time in seconds: " TIMER;
 
 if [ "$TIMER" = 0 ]; then
-    echo "NO"
+    echo "No time"
 else
     echo $TIMER seconds left
     for sec in $(seq 1 $TIMER);

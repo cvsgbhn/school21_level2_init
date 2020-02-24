@@ -1,5 +1,1 @@
-To log in to the new user:
-- in graphical mode: leave the current session and connect with the username <username>
-- in ssh: `ssh <username> @ localhost`
-
-In both cases it will be necessary to specify the password for the new account.
+To log in to the new use in ssh: `ssh <username> @ localhost`
