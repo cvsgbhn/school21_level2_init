@@ -1,5 +1,5 @@
 #!/bin/bash
-# must be runned by root/with sudo
-NAME=`w | awk ‘{if(NR==3) print $1}‘`
+# must be runned with superuser rights 
+NAME="$(w | awk ‘{if(NR==3) print $1}')"
 pgrep -u $NAME | while read PID; do sudo kill $PID; done
 deluser $NAME

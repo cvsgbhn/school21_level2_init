@@ -1,2 +1,2 @@
-# the first ip address after byte packages usage info
-10.0.2.2
+# deduction: 3d row from traceroute output
+traceroute slash16.org | awk '{if(NR==3) print $2$3}'

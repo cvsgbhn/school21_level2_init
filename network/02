@@ -1,7 +1,8 @@
 # broadcast is ip with last octet == 255
+echo "\nall characteristics: "
 ifconfig en0
-echo "broadcast: "
+echo "\nbroadcast: "
 ifconfig en0 | awk 'NR==5' | awk '{print $6}'
 # Address Resolution Protocol which can be used to find out about every device on the local network
-echo "ips in the same subnet: "
+echo "\nips in the same subnet: "
 arp -a | awk '{print $2}'
