@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Enter time in seconds: " TIMER;
+
+if [ "$TIMER" = 0 ]; then
+    echo "NO"
+else
+    echo $TIMER seconds left
+    for sec in $(seq 1 $TIMER);
+    do
+    clear
+    echo $(($TIMER - $sec)) seconds left
+    sleep 1;
+    done
+    clear
+    echo "Knock-knock, Neo"
+fi

@@ -1,17 +1,17 @@
 current_ip=$(curl -s "https://checkip.dyndns.org/" | grep -o -E "[0-9\.]+")
 echo ${current_ip}
-geolocation_data=$(curl -s http://ip-api.com/${current_ip})
+geolocation_data=$(curl -s http://ipapi.co/${current_ip}/json)
 echo ${geolocation_data}
 
-country_code=$(echo ${geolocation_data} | grep -o -P -i "(?<=<countryCode>).*(?=</countryCode>)")
+country_code=$(echo ${geolocation_data} | grep -o -P -i "(?<=<country_code>).*(?=</country_code>)")
 
-country_name=$(echo ${geolocation_data} | grep -o -P -i "(?<=<country>).*(?=</country>)")
+country_name=$(echo ${geolocation_data} | grep -o -P -i "(?<=<country_name>).*(?=</country_name>)")
 
 city_name=$(echo ${geolocation_data} | grep -o -P -i "(?<=<city>).*(?=</city>)")
 
-latitude=$(echo ${geolocation_data} | grep -o -P -i "(?<=<lat>).*(?=</lat>)")
+latitude=$(echo ${geolocation_data} | grep -o -P -i "(?<=<latitude>).*(?=</latitude>)")
 
-longitude=$(echo ${geolocation_data} | grep -o -P -i "(?<=<lon>).*(?=</lon>)")
+longitude=$(echo ${geolocation_data} | grep -o -P -i "(?<=<longitude>).*(?=</longitude>)")
 
 woeid=$(curl -s "http://metaweather.com/api/location/search/?lattlong=${latitude},${longitude}" | grep -o -P -i "(?<=<woeid>).*(?<=/woeid>)" )
 
