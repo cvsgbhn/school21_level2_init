@@ -1,3 +1,1 @@
-ipconfig getoption en0 server_identifier
-# or try this: ipconfig getpacket en0
-# look for server_identifier
+ipconfig getpacket en0 | grep "ciaddr" | awk '{print $3}'

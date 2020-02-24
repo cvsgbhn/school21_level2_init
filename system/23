@@ -1,1 +1,2 @@
-To log in to the new use in ssh: `ssh <username> @ localhost`
+To log in to the new use in ssh: `ssh <username> @ ip/hostname`
+graphic: username + pwd

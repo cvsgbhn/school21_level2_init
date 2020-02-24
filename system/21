@@ -1,1 +1,1 @@
-cat /etc/passwd | grep '/home'
+cat /etc/passwd | grep '/home' | awk '{print $1}'

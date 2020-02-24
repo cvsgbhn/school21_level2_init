@@ -1,3 +1,3 @@
-systemctl status ssh
+sudo systemctl status ssh
 # or:
 # sudo /etc/init.d/ssh status
