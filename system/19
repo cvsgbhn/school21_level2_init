@@ -1,1 +1,1 @@
-sudo systemctl list-units --type service --all | grep 'enabled'
+sudo systemctl list-units --type service --all

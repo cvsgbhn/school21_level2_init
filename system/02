@@ -1,2 +1,2 @@
 # shows current name: hostnamectl
-sudo hostname new_name
+sudo hostname newname
